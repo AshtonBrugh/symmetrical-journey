@@ -1,0 +1,16 @@
+body {
+  font-family: 'Darker Grotesque', sans-serif;
+}
+
+.header {
+  display: flex;
+  padding: 1.5vw 2vh 1vw 5vh;
+  text-decoration: underline;
+}
+
+.header-content {
+  font-size: 3.2vh;
+}
+.footer {
+  display: flex;
+}
