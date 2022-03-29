@@ -1,29 +1,29 @@
-// const faker = require('faker')
-// const { db } = require('../config/connection');
-// const { User } = require('../models');
+const faker = require('faker')
+const { db } = require('../config/connection');
+const { User } = require('../models');
 
-// const seed = async () => {
-//     try {
-//         await db.sync({ force: true })
+const seed = async () => {
+    try {
+        await db.sync({ force: true })
 
-//         let users = [];
+        let users = [];
 
-//         for (let i = 0; i < 50; i++) {
-//             const name = faker.name.firstName()
-//             let newUser = {
-//                 username: faker.internet.userName(),
-//                 email: faker.internet.email(name).toLowerCase(),
-//                 password: faker.internet.password()
-//             }
+        for (let i = 0; i < 50; i++) {
+            const name = faker.name.firstName()
+            let newUser = {
+                username: faker.internet.userName(),
+                email: faker.internet.email(name).toLowerCase(),
+                password: faker.internet.password()
+            }
 
-//             users.push(newUser)
-//         };
+            users.push(newUser)
+        };
 
-//         users.forEach(async (user) => {
-//             await User.create(user);
-//         })
-//      } catch(err) {
-//          console.log(err);
-//      }
+        users.forEach(async (user) => {
+            await User.create(user);
+        })
+     } catch(err) {
+         console.log(err);
+     }
 
-//  };
+ };
